@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             ListTile(
                 leading: Icon(Icons.home),
-                title: Text('CHEST & ABD-PELVIS'),
+                title: Text('CHEST&ABD-PELVIS'),
                 onTap: () {
                   switchProducts(products1);
                   Navigator.pop(context);
