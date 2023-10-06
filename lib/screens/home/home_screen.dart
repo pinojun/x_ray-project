@@ -76,15 +76,8 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
-            child: Text(
-              "Women",
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineMedium
-                  ?.copyWith(fontWeight: FontWeight.bold),
-            ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
@@ -117,6 +110,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   AppBar buildAppBar() {
     return AppBar(
+      title: Text("Chest, Abd-Pelvis",
+          style: Theme.of(context).textTheme.headlineSmall),
+      centerTitle: true,
       backgroundColor: Colors.white,
       elevation: 0,
       actions: [
