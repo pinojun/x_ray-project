@@ -3,9 +3,6 @@ import 'package:x_ray/constants.dart';
 import 'package:x_ray/models/Product.dart';
 
 
-
-
-
 class ItemCard extends StatelessWidget {
   const ItemCard({super.key, required this.product, required this.press});
 

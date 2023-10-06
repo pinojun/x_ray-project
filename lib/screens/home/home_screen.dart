@@ -5,7 +5,7 @@ import 'package:x_ray/screens/details/details_screen.dart';
 import 'package:x_ray/screens/home/components/item_card.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   AppBar buildAppBar() {
     return AppBar(
-      title: Text("Chest, Abd-Pelvis",
+      title: Text("Chest & Abdomen",
           style: Theme.of(context).textTheme.headlineSmall),
       centerTitle: true,
       backgroundColor: Colors.white,
