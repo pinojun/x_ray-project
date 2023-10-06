@@ -1,9 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:x_ray/constants.dart';
-import 'package:x_ray/screens/home/components/body.dart';
+import 'package:x_ray/models/Product.dart';
+import 'package:x_ray/screens/details/details_screen.dart';
+import 'package:x_ray/screens/home/components/item_card.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  List<Product> selectedProducts = [];
+  //Product class로 selectedproducts 라는 변수 생성
+
+  @override
+  void initState() {
+    // Initialize the selectedProducts with products1 as the default choice.
+    selectedProducts = products1;
+    super.initState();
+  }
+
+  void switchProducts(List<Product> newProducts) {
+    //버튼을 클릭하면 새로운 products값이 switchProducts 인스턴스의
+    // 인자값으로 들어와서 selectedProducts에 할당된다.
+    setState(() {
+      selectedProducts = newProducts;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,30 +40,78 @@ class HomeScreen extends StatelessWidget {
             ListTile(
                 leading: Icon(Icons.home),
                 title: Text('CHEST & ABD-PELVIS'),
-                onTap: () {}),
+                onTap: () {
+                  switchProducts(products1);
+                  Navigator.pop(context);
+                }),
             ExpansionTile(
               title: Text('LOW EXTREMITY'),
               leading: Icon(Icons.home),
               childrenPadding: EdgeInsets.only(left: 60),
               children: [
                 ListTile(
-                  title: Text('FOOT'),
-                  onTap: () {},
-                ),
+                    title: Text('FOOT'),
+                    onTap: () {
+                      switchProducts(products2);
+                      Navigator.pop(context);
+                    }),
                 ListTile(
-                  title: Text('ANKLE'),
-                  onTap: () {},
-                ),
+                    title: Text('ANKLE'),
+                    onTap: () {
+                      switchProducts(products3);
+                      Navigator.pop(context);
+                    }),
                 ListTile(
-                  title: Text('KNEE'),
-                  onTap: () {},
-                ),
+                    title: Text('KNEE'),
+                    onTap: () {
+                      switchProducts(products1);
+                      Navigator.pop(context);
+                    }),
               ],
             )
           ],
         ),
       ),
-      body: Body(),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+            child: Text(
+              "Women",
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineMedium
+                  ?.copyWith(fontWeight: FontWeight.bold),
+            ),
+          ),
+          SizedBox(height: 10),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+              child: GridView.builder(
+                itemCount: selectedProducts.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: kDefaultPaddin,
+                  crossAxisSpacing: kDefaultPaddin,
+                  childAspectRatio: 0.75,
+                ),
+                itemBuilder: (context, index) => ItemCard(
+                  product: selectedProducts[index],
+                  press: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailsScreen(
+                        product: selectedProducts[index],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
