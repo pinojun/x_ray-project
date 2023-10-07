@@ -59,7 +59,7 @@ class ProductTitleWithImage extends StatelessWidget {
           ),
           Text(
             "Aristocratic Hand Bag", //검사목적 내용
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(fontSize: 17, color: Colors.white),
           ),
           SizedBox(height: 60),
           Row(
@@ -78,10 +78,12 @@ class ProductTitleWithImage extends StatelessWidget {
                     ),
                     SizedBox(height: 5),
                     GestureDetector(
-                      child: Icon(Icons.zoom_in, color: Colors.white,),
-                      onTap: (){},
+                      child: Icon(
+                        Icons.zoom_in,
+                        color: Colors.white,
+                      ),
+                      onTap: () {},
                     ),
-
                   ],
                 ),
               ),
