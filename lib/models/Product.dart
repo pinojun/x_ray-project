@@ -107,7 +107,7 @@ List<Product> products2 = [
       size: 12,
       description: dummyText,
       image: "assets/images/dice5.png",
-      color: Color(0xFFFB7883)),
+      color: Color(0xFFEEE5E5)),
   Product(
     id: 6,
     title: "Office Code",
