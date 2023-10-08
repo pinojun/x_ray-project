@@ -1,47 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:x_ray/constants.dart';
 import 'package:x_ray/models/Product.dart';
+import 'package:x_ray/screens/zoom/zoom_image.dart';
 
 class ProductTitleWithImage extends StatelessWidget {
-  const ProductTitleWithImage({super.key, required this.product});
+  const ProductTitleWithImage({super.key, required this.product });
 
   final Product product;
 
-  // void showPopup(context, anatomyimage) {
-  //   //anatomyimage popup page
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) {
-  //       return Dialog(
-  //         child: Container(
-  //           width: MediaQuery.of(context).size.width * 0.8,
-  //           height: 400,
-  //           decoration: BoxDecoration(
-  //               borderRadius: BorderRadius.circular(10.0), color: Colors.white),
-  //           child: Column(
-  //             mainAxisAlignment: MainAxisAlignment.start,
-  //             children: [
-  //               ClipRRect(
-  //                 borderRadius: BorderRadius.all(Radius.circular(20.0)),
-  //                 child: Container(child: anatomyimage),
-  //               ),
-  //               ElevatedButton.icon(
-  //                 onPressed: () {
-  //                   Navigator.pop(context);
-  //                 },
-  //                 icon: const Icon(
-  //                   Icons.close,
-  //                   size: 20.0,
-  //                 ),
-  //                 label: const Text('close'),
-  //               ),
-  //             ],
-  //           ),
-  //         ),
-  //       );
-  //     },
-  //   );
-  // }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +50,7 @@ class ProductTitleWithImage extends StatelessWidget {
                         Icons.zoom_in,
                         color: Colors.white,
                       ),
-                      onTap: () {},
+                      onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>ZoomedImagePage(product: product)));},
                     ),
                   ],
                 ),
