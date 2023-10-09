@@ -42,7 +42,7 @@ class DetailsScreen extends StatelessWidget {
                             elevation: 3,
                             shadowColor: Colors.blue,
                             child: Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(15),
                               width: MediaQuery.of(context).size.width,
                               child: Text(
                                 'hhbkhkbberbrtbretwenern',
@@ -50,7 +50,7 @@ class DetailsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 5),
+                          SizedBox(height: 10),
                           Text('CHECK POINT', style: textTitle),
                           SizedBox(height: 5),
                           Card(
@@ -66,7 +66,7 @@ class DetailsScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 5),
+                          SizedBox(height: 15),
                           Text('호흡: ㅇ훋깋어힝후잎ㅁ', style: textDescription),
                           Text('중심선: ㅍㄷ쥳ㅈ귣ㅈㄱㄷ줒', style: textDescription),
                           SizedBox(height: 5),
