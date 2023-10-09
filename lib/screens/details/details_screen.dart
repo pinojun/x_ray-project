@@ -7,7 +7,6 @@ class DetailsScreen extends StatelessWidget {
   final Product product;
   const DetailsScreen({super.key, required this.product});
 
-
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -39,9 +38,9 @@ class DetailsScreen extends StatelessWidget {
                           Text('POSITIONING', style: textTitle),
                           SizedBox(height: 5),
                           Card(
-                            surfaceTintColor: Colors.blue,
+                            surfaceTintColor: Colors.grey,
                             elevation: 3,
-                            shadowColor: Colors.grey,
+                            shadowColor: Colors.blue,
                             child: Container(
                               padding: EdgeInsets.all(10),
                               width: MediaQuery.of(context).size.width,
@@ -55,9 +54,9 @@ class DetailsScreen extends StatelessWidget {
                           Text('CHECK POINT', style: textTitle),
                           SizedBox(height: 5),
                           Card(
-                            surfaceTintColor: Colors.blue,
+                            surfaceTintColor: Colors.grey,
                             elevation: 3,
-                            shadowColor: Colors.grey,
+                            shadowColor: Colors.blue,
                             child: Container(
                               padding: EdgeInsets.all(10),
                               width: MediaQuery.of(context).size.width,

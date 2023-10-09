@@ -4,12 +4,9 @@ import 'package:x_ray/models/Product.dart';
 import 'package:x_ray/screens/zoom/zoom_image.dart';
 
 class ProductTitleWithImage extends StatelessWidget {
-  const ProductTitleWithImage({super.key, required this.product });
+  const ProductTitleWithImage({super.key, required this.product});
 
   final Product product;
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +34,14 @@ class ProductTitleWithImage extends StatelessWidget {
                 flex: 1,
                 child: Column(
                   children: [
-                    Hero(
-                      tag: "${product.id}",
-                      child: Image.asset(
-                        product.image2,
-                        fit: BoxFit.fill,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Hero(
+                        tag: "${product.id}",
+                        child: Image.asset(
+                          product.image2,
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     ),
                     SizedBox(height: 5),
@@ -50,7 +50,13 @@ class ProductTitleWithImage extends StatelessWidget {
                         Icons.zoom_in,
                         color: Colors.white,
                       ),
-                      onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>ZoomedImagePage(product: product)));},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    ZoomedImagePage(product: product)));
+                      },
                     ),
                   ],
                 ),
@@ -58,11 +64,14 @@ class ProductTitleWithImage extends StatelessWidget {
               SizedBox(width: kDefaultPaddin),
               Expanded(
                 flex: 2,
-                child: Hero(
-                  tag: "${product.id}",
-                  child: Image.asset(
-                    product.image1,
-                    fit: BoxFit.fill,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Hero(
+                    tag: "${product.id}",
+                    child: Image.asset(
+                      product.image1,
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               )

@@ -12,17 +12,22 @@ class ZoomedImagePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Anatomy Image'),
       ),
-      body: Center(
-        child: GestureDetector(
-          // 확대 이미지에서 빠져나가기 위한 GestureDetector
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Hero(
-            tag: "${product.id}",
-            child: Image.asset(
-              product.image2,
-              fit: BoxFit.contain, // 이미지를 화면에 맞게 확대/축소
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Center(
+          // GestureDetector(
+          // // 확대 이미지에서 빠져나가기 위한 GestureDetector
+          // onTap: () {
+          //   Navigator.pop(context);
+          // },
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(15),
+            child: Hero(
+              tag: "${product.id}",
+              child: Image.asset(
+                product.image2,
+                fit: BoxFit.contain, // 이미지를 화면에 맞게 확대/축소
+              ),
             ),
           ),
         ),

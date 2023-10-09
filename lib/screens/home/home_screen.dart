@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
   AppBar buildAppBar() {
     return AppBar(
       title: Text("Chest & Abdomen",
-          style: Theme.of(context).textTheme.headlineSmall),
+          style: textTitle,),
       centerTitle: true,
       backgroundColor: Colors.white,
       elevation: 0,
