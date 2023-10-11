@@ -22,7 +22,8 @@ class DetailsScreen extends StatelessWidget {
                 children: [
                   Container(
                     margin: EdgeInsets.only(top: size.height * 0.3),
-                    height: 700,
+                    height: size.height,
+                    width: size.width,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
@@ -31,11 +32,11 @@ class DetailsScreen extends StatelessWidget {
                       ),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.only(top: 70, left: 10),
+                      padding: EdgeInsets.only(top: 70, left: 10, right: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('POSITIONING', style: textTitle),
+                          Text('POSITIONING', style: Title2),
                           SizedBox(height: 5),
                           Card(
                             surfaceTintColor: Colors.grey,
@@ -43,15 +44,15 @@ class DetailsScreen extends StatelessWidget {
                             shadowColor: Colors.blue,
                             child: Container(
                               padding: EdgeInsets.all(15),
-                              width: MediaQuery.of(context).size.width,
+                              width: size.width,
                               child: Text(
                                 'hhbkhkbberbrtbretwenern',
-                                style: textDescription,
+                                style: Description1,
                               ),
                             ),
                           ),
                           SizedBox(height: 10),
-                          Text('CHECK POINT', style: textTitle),
+                          Text('CHECK POINT', style: Title2),
                           SizedBox(height: 5),
                           Card(
                             surfaceTintColor: Colors.grey,
@@ -59,93 +60,18 @@ class DetailsScreen extends StatelessWidget {
                             shadowColor: Colors.blue,
                             child: Container(
                               padding: EdgeInsets.all(10),
-                              width: MediaQuery.of(context).size.width,
+                              width: size.width,
                               child: Text(
                                 'hhbkhkbtnrenertnernw',
-                                style: textDescription,
+                                style: Description1,
                               ),
                             ),
                           ),
                           SizedBox(height: 15),
-                          Text('호흡: ㅇ훋깋어힝후잎ㅁ', style: textDescription),
-                          Text('중심선: ㅍㄷ쥳ㅈ귣ㅈㄱㄷ줒', style: textDescription),
-                          SizedBox(height: 5),
-                          Container(
-                            //촬영조건
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Text('촬영조건', style: textTitle),
-                                ),
-                                SizedBox(height: 5),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Column(
-                                      children: [
-                                        Container(
-                                          child:
-                                              Text('kVp', style: textSubTitle),
-                                        ),
-                                        Container(
-                                            child: Text('73',
-                                                style: textSubDescription)),
-                                      ],
-                                    ),
-                                    Column(
-                                      children: [
-                                        Container(
-                                            child: Text('mAs',
-                                                style: textSubTitle)),
-                                        Container(
-                                            child: Text('20(16~30)',
-                                                style: textSubDescription)),
-                                      ],
-                                    ),
-                                    Column(
-                                      children: [
-                                        Container(
-                                            child: Text('표준두께',
-                                                style: textSubTitle)),
-                                        Container(
-                                            child: Text('15.4',
-                                                style: textSubDescription)),
-                                      ],
-                                    ),
-                                    Column(
-                                      children: [
-                                        Container(
-                                            child: Text('SID',
-                                                style: textSubTitle)),
-                                        Container(
-                                            child: Text('100cm',
-                                                style: textSubDescription)),
-                                      ],
-                                    ),
-                                    Column(
-                                      children: [
-                                        Container(
-                                            child: Text('Grid',
-                                                style: textSubTitle)),
-                                        Container(
-                                            child: Text('YES',
-                                                style: textSubDescription)),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                Container(
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Text(
-                                    '출처:식약처 영상의학검사(일반촬영) 표준촬영기법 가이드라인',
-                                    style: textSubDescription,
-                                  ),
-                                )
-                              ],
-                            ),
-                          )
+                          Text('호흡: ㅇ훋깋어힝후잎ㅁ', style: Description1),
+                          Text('중심선: ㅍㄷ쥳ㅈ귣ㅈㄱㄷ줒', style: Description1),
+                          SizedBox(height: 10),
+                          buildExposureFactor(context)
                         ],
                       ),
                     ),
@@ -162,26 +88,72 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 
-  Container dotContainer() {
+  Container buildExposureFactor(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(2.5),
-      height: 15,
-      width: 15,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(
-          color: Color(0xFF356C95),
-        ),
-      ),
-      child: DecoratedBox(
-        decoration:
-            BoxDecoration(color: Color(0xFF356C95), shape: BoxShape.circle),
+      //촬영조건
+      child: Column(
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: Text('촬영조건', style: Title2),
+          ),
+          SizedBox(height: 5),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  Container(
+                    child: Text('kVp', style: Title3),
+                  ),
+                  Container(child: Text('73', style: Description2)),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(child: Text('mAs', style: Title3)),
+                  Container(child: Text('20(16~30)', style: Description2)),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(child: Text('표준두께', style: Title3)),
+                  Container(child: Text('15.4', style: Description2)),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(child: Text('SID', style: Title3)),
+                  Container(child: Text('100cm', style: Description2)),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(child: Text('Grid', style: Title3)),
+                  Container(child: Text('YES', style: Description2)),
+                ],
+              ),
+            ],
+          ),
+          SizedBox(height: 5),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: Text(
+              '출처:식약처 영상의학검사(일반촬영) 표준촬영기법 가이드라인',
+              style: Description3,
+            ),
+          )
+        ],
       ),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
+      title: Text(
+        product.title, //검사명
+        style: Title1W,
+      ),
       backgroundColor: product.color,
       elevation: 0,
       leading: IconButton(
@@ -190,11 +162,6 @@ class DetailsScreen extends StatelessWidget {
           Navigator.pop(context);
         },
       ),
-      actions: [
-        IconButton(
-            onPressed: () {}, icon: Icon(Icons.search), color: kTextColor),
-        SizedBox(width: kDefaultPaddin / 2)
-      ],
     );
   }
 }

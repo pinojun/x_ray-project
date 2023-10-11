@@ -15,18 +15,15 @@ class ProductTitleWithImage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+
+          SizedBox(height: 5),
+
           Text(
-            product.title, //검사명
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge!
-                .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-          Text(
-            "Aristocratic Hand Bag", //검사목적 내용
-            style: TextStyle(fontSize: 17, color: Colors.white),
-          ),
-          SizedBox(height: 60),
+              "Aristocratic Hand Bag Aristocratic Hand Bag Aristocratic Hand Bag Aristocratic Hand Bag", //검사목적 내용
+              style: Description1W,
+            ),
+
+          SizedBox(height: 40),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

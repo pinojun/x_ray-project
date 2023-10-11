@@ -148,7 +148,7 @@ List<Product> products3 = [
       price: 234,
       size: 8,
       description: dummyText,
-      image1: "assets/images/14.jpgg",
+      image1: "assets/images/14.jpg",
       image2: "assets/images/5.jpg",
       color: Color(0xFFD3A984)),
   Product(

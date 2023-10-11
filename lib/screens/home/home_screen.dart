@@ -36,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: buildAppBar(),
       drawer: Drawer(
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: [
             ListTile(
                 leading: Icon(Icons.home),
@@ -110,15 +111,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   AppBar buildAppBar() {
     return AppBar(
-      title: Text("Chest & Abdomen",
-          style: textTitle,),
-      centerTitle: true,
+      title: Text(
+        "Chest & Abd-Pelvis",
+        style: Title1,
+      ),
+      // centerTitle: true,
       backgroundColor: Colors.white,
       elevation: 0,
       actions: [
-        IconButton(
-            onPressed: () {}, icon: Icon(Icons.search), color: kTextColor),
-        SizedBox(width: kDefaultPaddin / 2),
         IconButton(
           icon: Icon(Icons.exit_to_app),
           onPressed: () {},
