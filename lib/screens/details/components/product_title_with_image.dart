@@ -19,7 +19,7 @@ class ProductTitleWithImage extends StatelessWidget {
           SizedBox(height: 5),
 
           Text(
-              "Aristocratic Hand Bag Aristocratic Hand Bag Aristocratic Hand Bag Aristocratic Hand Bag", //검사목적 내용
+              product.purpose, //검사목적 내용
               style: Description1W,
             ),
 
@@ -36,7 +36,7 @@ class ProductTitleWithImage extends StatelessWidget {
                       child: Hero(
                         tag: "${product.id}",
                         child: Image.asset(
-                          product.image2,
+                          product.anaimage,
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -66,7 +66,7 @@ class ProductTitleWithImage extends StatelessWidget {
                   child: Hero(
                     tag: "${product.id}",
                     child: Image.asset(
-                      product.image1,
+                      product.poimage,
                       fit: BoxFit.fill,
                     ),
                   ),

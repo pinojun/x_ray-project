@@ -13,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<Product> selectedProducts = [];
+
   //Product class로 selectedproducts 라는 변수 생성
 
   @override
@@ -30,23 +31,42 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  String appBarTitle = 'CHEST'; //appbar 타이틀의 기본값
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
+      appBar: AppBar(
+        title: Text(
+          appBarTitle,
+          style: Title1,
+        ),
+        // centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.exit_to_app),
+            onPressed: () {},
+          ),
+        ],
+      ),
       drawer: Drawer(
         child: ListView(
           physics: BouncingScrollPhysics(),
           children: [
             ListTile(
                 leading: Icon(Icons.home),
-                title: Text('CHEST&ABD-PELVIS'),
+                title: Text('CHEST'),
                 onTap: () {
                   switchProducts(products1);
+                  setState(() {
+                    appBarTitle = 'CHEST'; //appbar 타이틀의 값을 변경
+                  });
                   Navigator.pop(context);
                 }),
             ExpansionTile(
-              title: Text('LOW EXTREMITY'),
+              title: Text('LOW EXTERMITY'),
               leading: Icon(Icons.home),
               childrenPadding: EdgeInsets.only(left: 60),
               children: [
@@ -54,18 +74,27 @@ class _HomeScreenState extends State<HomeScreen> {
                     title: Text('FOOT'),
                     onTap: () {
                       switchProducts(products2);
+                      setState(() {
+                        appBarTitle = 'FOOT';
+                      });
                       Navigator.pop(context);
                     }),
                 ListTile(
                     title: Text('ANKLE'),
                     onTap: () {
                       switchProducts(products3);
+                      setState(() {
+                        appBarTitle = 'ANKLE';
+                      });
                       Navigator.pop(context);
                     }),
                 ListTile(
                     title: Text('KNEE'),
                     onTap: () {
                       switchProducts(products1);
+                      setState(() {
+                        appBarTitle = 'KNEE';
+                      });
                       Navigator.pop(context);
                     }),
               ],
@@ -106,24 +135,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-    );
-  }
-
-  AppBar buildAppBar() {
-    return AppBar(
-      title: Text(
-        "Chest & Abd-Pelvis",
-        style: Title1,
-      ),
-      // centerTitle: true,
-      backgroundColor: Colors.white,
-      elevation: 0,
-      actions: [
-        IconButton(
-          icon: Icon(Icons.exit_to_app),
-          onPressed: () {},
-        ),
-      ],
     );
   }
 }

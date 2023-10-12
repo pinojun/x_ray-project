@@ -25,7 +25,7 @@ class ZoomedImagePage extends StatelessWidget {
             child: Hero(
               tag: "${product.id}",
               child: Image.asset(
-                product.image2,
+                product.anaimage,
                 fit: BoxFit.contain, // 이미지를 화면에 맞게 확대/축소
               ),
             ),
