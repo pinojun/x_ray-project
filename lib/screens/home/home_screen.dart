@@ -45,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         actions: [
+          Text('EXIT'),
           IconButton(
             icon: Icon(Icons.exit_to_app),
             onPressed: () {},

@@ -15,15 +15,12 @@ class ProductTitleWithImage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
-          SizedBox(height: 5),
-
+          // SizedBox(height: 5),
           Text(
-              product.purpose, //검사목적 내용
-              style: Description1W,
-            ),
-
-          SizedBox(height: 40),
+            product.purpose, //검사목적 내용
+            style: Description1W,
+          ),
+          SizedBox(height: 30),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -41,19 +38,23 @@ class ProductTitleWithImage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 5),
-                    GestureDetector(
-                      child: Icon(
-                        Icons.zoom_in,
-                        color: Colors.white,
-                      ),
-                      onTap: () {
+                    TextButton.icon(
+                      onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
                                     ZoomedImagePage(product: product)));
                       },
+                      icon: const Icon(
+                        Icons.zoom_in,
+                        size: 25.0,
+                        // color: Colors.black87,
+                      ),
+                      label: const Text('Check Point'),
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                      ),
                     ),
                   ],
                 ),

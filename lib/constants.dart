@@ -17,7 +17,7 @@ const Title3 = TextStyle(
     fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black);
 
 const Description1W = TextStyle(
-    fontWeight: FontWeight.bold, fontSize: 17, color: Colors.white);
+    fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white);
 
 const Description1 = TextStyle(
     fontSize: 17, color: Colors.black);

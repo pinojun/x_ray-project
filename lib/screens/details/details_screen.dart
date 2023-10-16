@@ -32,117 +32,33 @@ class DetailsScreen extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: EdgeInsets.only(
-                          top: 70, left: 10, right: 10, bottom: 30),
+                          top: 50, left: 10, right: 10, bottom: 30),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(' POSITIONING', style: Title2),
+                          Text(' Positioning', style: Title2),
                           SizedBox(height: 5),
-                          Card(
-                            surfaceTintColor: Colors.grey,
-                            elevation: 3,
-                            shadowColor: Colors.blue,
-                            child: Container(
-                              padding: EdgeInsets.all(15),
-                              width: size.width,
-                              child: Text(
-                                product.position,
-                                style: Description1,
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 10),
-                          Text(' CHECK POINT', style: Title2),
-                          SizedBox(height: 5),
-                          Card(
-                            surfaceTintColor: Colors.grey,
-                            elevation: 3,
-                            shadowColor: Colors.blue,
-                            child: Container(
-                              padding: EdgeInsets.all(10),
-                              width: size.width,
-                              child: Text(
-                                product.checkpoint,
-                                style: Description1,
-                              ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border:
+                                    Border.all(color: Colors.blue, width: 1),
+                                boxShadow: [
+                                  BoxShadow(color: Colors.blue, blurRadius: 3)
+                                ],
+                                borderRadius: BorderRadius.circular(12)),
+                            padding: EdgeInsets.all(15),
+                            width: size.width,
+                            child: Text(
+                              product.position,
+                              style: Description1,
                             ),
                           ),
                           SizedBox(height: 15),
                           Text(' 호흡: ' + product.breath, style: Description1),
                           Text(' 중심선: ' + product.cr, style: Description1),
                           SizedBox(height: 10),
-                          Container(
-                            //촬영조건
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Text(' 촬영조건', style: Title2),
-                                ),
-                                SizedBox(height: 5),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Column(
-                                      children: [
-                                        Container(
-                                          child: Text('kVp', style: Title3),
-                                        ),
-                                        Container(
-                                            child: Text(product.kvp,
-                                                style: Description2)),
-                                      ],
-                                    ),
-                                    Column(
-                                      children: [
-                                        Container(
-                                            child: Text('mAs', style: Title3)),
-                                        Container(
-                                            child: Text(product.mas,
-                                                style: Description2)),
-                                      ],
-                                    ),
-                                    Column(
-                                      children: [
-                                        Container(
-                                            child: Text('표준두께', style: Title3)),
-                                        Container(
-                                            child: Text(product.thick,
-                                                style: Description2)),
-                                      ],
-                                    ),
-                                    Column(
-                                      children: [
-                                        Container(
-                                            child: Text('SID', style: Title3)),
-                                        Container(
-                                            child: Text(product.sid,
-                                                style: Description2)),
-                                      ],
-                                    ),
-                                    Column(
-                                      children: [
-                                        Container(
-                                            child: Text('Grid', style: Title3)),
-                                        Container(
-                                            child: Text(product.grid,
-                                                style: Description2)),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 5),
-                                Container(
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Text(
-                                    '출처:식약처 영상의학검사(일반촬영) 표준촬영기법 가이드라인',
-                                    style: Description3,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
+                          ExposureFactor(product: product),
                         ],
                       ),
                     ),
@@ -172,6 +88,76 @@ class DetailsScreen extends StatelessWidget {
         onPressed: () {
           Navigator.pop(context);
         },
+      ),
+    );
+  }
+}
+
+class ExposureFactor extends StatelessWidget {
+  const ExposureFactor({
+    super.key,
+    required this.product,
+  });
+
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      //촬영조건
+      child: Column(
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: Text(' 촬영조건', style: Title3),
+          ),
+          SizedBox(height: 5),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  Container(
+                    child: Text('kVp', style: Title3),
+                  ),
+                  Container(child: Text(product.kvp, style: Description2)),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(child: Text('mAs', style: Title3)),
+                  Container(child: Text(product.mas, style: Description2)),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(child: Text('표준두께', style: Title3)),
+                  Container(child: Text(product.thick, style: Description2)),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(child: Text('SID', style: Title3)),
+                  Container(child: Text(product.sid, style: Description2)),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(child: Text('Grid', style: Title3)),
+                  Container(child: Text(product.grid, style: Description2)),
+                ],
+              ),
+            ],
+          ),
+          SizedBox(height: 5),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: Text(
+              '출처:식약처 영상의학검사(일반촬영) 표준촬영기법 가이드라인',
+              style: Description3,
+            ),
+          )
+        ],
       ),
     );
   }

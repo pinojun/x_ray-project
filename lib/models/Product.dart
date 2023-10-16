@@ -42,7 +42,7 @@ List<Product> products1 = [
                   'liver와 hilum 구분이 가능하다.'
                   '흉곽이 회전되지 않아야 한다.(clavicle 내측단이 spine으로 부터 같은 거리,  양쪽 clavicle이 같은 수평선 상에 위치)',
       breath: '호흡을 깊게 들여 마시고 멈춘 상태에서 촬영\n'
-              '(기흉 관찰: 숨을 다 내쉬고 멈춘 상태에서 촬영)',
+              '      (기흉 관찰: 숨을 다 내쉬고 멈춘 상태에서 촬영)',
       cr: '흉추 6~7번, 디텍터에 수직',
       kvp: '110',
       mas: '8 (4~13)',
@@ -129,7 +129,7 @@ List<Product> products1 = [
       grid: 'YES',
       poimage: "assets/images/4.jpg",
       anaimage: "assets/images/15.jpg",
-      color: Color(0xFFE6B398)),
+      color: Color(0xFF3D82AE)),
   Product(
       id: 5,
       examtitle: "CHEST PA",
@@ -181,7 +181,7 @@ List<Product> products1 = [
     grid: 'YES',
     poimage: "assets/images/6.jpg",
     anaimage: "assets/images/13.jpg",
-    color: Color(0xFFAEAEAE),
+    color: Color(0xFFD3A984),
   ),
 ];
 
