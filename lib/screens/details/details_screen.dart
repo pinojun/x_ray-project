@@ -5,6 +5,7 @@ import 'package:x_ray/screens/details/components/product_title_with_image.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
+
   const DetailsScreen({super.key, required this.product});
 
   @override
@@ -21,7 +22,6 @@ class DetailsScreen extends StatelessWidget {
                 children: [
                   Container(
                     margin: EdgeInsets.only(top: size.height * 0.3),
-                    // height: size.height,
                     width: size.width,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -55,9 +55,35 @@ class DetailsScreen extends StatelessWidget {
                             ),
                           ),
                           SizedBox(height: 15),
-                          Text(' 호흡: ' + product.breath, style: Description1),
-                          Text(' 중심선: ' + product.cr, style: Description1),
-                          SizedBox(height: 10),
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(text: ' 호흡 : ', style: Title3),
+                                TextSpan(
+                                    text: product.breath, style: Description1)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 10),
+                            height: 2,
+                            width: size.width - 10,
+                            color: Colors.black54,
+                          ),
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(text: ' 중심선 : ', style: Title3),
+                                TextSpan(text: product.cr, style: Description1)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 10),
+                            height: 2,
+                            width: size.width - 10,
+                            color: Colors.black54,
+                          ),
                           ExposureFactor(product: product),
                         ],
                       ),
