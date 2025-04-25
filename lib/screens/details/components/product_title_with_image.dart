@@ -31,7 +31,7 @@ class ProductTitleWithImage extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Hero(
-                        tag: "${product.id}",
+                        tag: "anatomy_${product.id}",
                         child: Image.asset(
                           product.anaimage,
                           fit: BoxFit.fill,
@@ -65,7 +65,7 @@ class ProductTitleWithImage extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Hero(
-                    tag: "${product.id}",
+                    tag: "position_${product.id}",
                     child: Image.asset(
                       product.poimage,
                       fit: BoxFit.fill,

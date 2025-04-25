@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:x_ray/constants.dart';
 import 'package:x_ray/models/Product.dart';
 
-
 class ItemCard extends StatelessWidget {
   const ItemCard({super.key, required this.product, required this.press});
 
@@ -12,7 +11,6 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-
       child: GestureDetector(
         onTap: press,
         child: Column(
@@ -26,7 +24,7 @@ class ItemCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Hero(
-                  tag: "${product.id}",
+                  tag: "position_${product.id}",
                   child: Image.asset(product.poimage),
                 ),
               ),
@@ -39,7 +37,6 @@ class ItemCard extends StatelessWidget {
                 style: Title2,
               ),
             ),
-
           ],
         ),
       ),

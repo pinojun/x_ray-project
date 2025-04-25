@@ -18,44 +18,42 @@ class ZoomedImagePage extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Center(
             child: Hero(
-                tag: "${product.id}",
-                child: Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(15),
-                        child: Image.asset(
-                          product.anaimage,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      const Text(
-                        ' Check Point',
-                        style: Title2,
-                      ),
-                      const SizedBox(height: 2),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(color: Colors.blue, width: 1),
-                            boxShadow: const [
-                              BoxShadow(color: Colors.blue, blurRadius: 3)
-                            ],
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Container(
-                          padding: const EdgeInsets.all(10),
-                          width: MediaQuery.of(context).size.width,
-                          child: Text(
-                            product.checkpoint,
-                            style: Description1,
-                          ),
-                        ),
-                      ),
-                    ],
+              tag: "anatomy_${product.id}",
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset(
+                      product.anaimage,
+                      fit: BoxFit.fill,
+                    ),
                   ),
-                ),
+                  const SizedBox(height: 20),
+                  const Text(
+                    ' Check Point',
+                    style: Title2,
+                  ),
+                  const SizedBox(height: 2),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Colors.blue, width: 1),
+                        boxShadow: const [
+                          BoxShadow(color: Colors.blue, blurRadius: 3)
+                        ],
+                        borderRadius: BorderRadius.circular(12)),
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width,
+                      child: Text(
+                        product.checkpoint,
+                        style: Description1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
