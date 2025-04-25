@@ -51,7 +51,7 @@ List<Product> products1 = [
       grid: 'YES',
       poimage: "assets/images/1.jpg",
       anaimage: "assets/images/18.jpg",
-      color: Color(0xFF3D82AE)),
+      color: const Color(0xFF3D82AE)),
   Product(
       id: 2,
       examtitle: "CHEST PA",
@@ -77,7 +77,7 @@ List<Product> products1 = [
       grid: 'YES',
       poimage: "assets/images/2.jpg",
       anaimage: "assets/images/17.jpg",
-      color: Color(0xFFD3A984)),
+      color: const Color(0xFFD3A984)),
   Product(
       id: 3,
       examtitle: "CHEST PA",
@@ -103,7 +103,7 @@ List<Product> products1 = [
       grid: 'YES',
       poimage: "assets/images/3.jpg",
       anaimage: "assets/images/16.jpg",
-      color: Color(0xFF989493)),
+      color: const Color(0xFF989493)),
   Product(
       id: 4,
       examtitle: "CHEST PA",
@@ -129,7 +129,7 @@ List<Product> products1 = [
       grid: 'YES',
       poimage: "assets/images/4.jpg",
       anaimage: "assets/images/15.jpg",
-      color: Color(0xFF3D82AE)),
+      color: const Color(0xFF3D82AE)),
   Product(
       id: 5,
       examtitle: "CHEST PA",
@@ -155,7 +155,7 @@ List<Product> products1 = [
       grid: 'YES',
       poimage: "assets/images/5.jpg",
       anaimage: "assets/images/14.jpg",
-      color: Color(0xFFFB7883)),
+      color: const Color(0xFFFB7883)),
   Product(
     id: 6,
     examtitle: "CHEST PA",
@@ -181,7 +181,7 @@ List<Product> products1 = [
     grid: 'YES',
     poimage: "assets/images/6.jpg",
     anaimage: "assets/images/13.jpg",
-    color: Color(0xFFD3A984),
+    color: const Color(0xFFD3A984),
   ),
 ];
 
@@ -211,7 +211,7 @@ List<Product> products2 = [
       grid: 'YES',
       poimage: "assets/images/7.jpg",
       anaimage: "assets/images/12.jpg",
-      color: Color(0xFF3D82AE)),
+      color: const Color(0xFF3D82AE)),
   Product(
       id: 2,
       examtitle: "CHEST PA",
@@ -237,7 +237,7 @@ List<Product> products2 = [
       grid: 'YES',
       poimage: "assets/images/8.jpg",
       anaimage: "assets/images/11.jpg",
-      color: Color(0xFFD3A984)),
+      color: const Color(0xFFD3A984)),
   Product(
       id: 3,
       examtitle: "CHEST PA",
@@ -263,7 +263,7 @@ List<Product> products2 = [
       grid: 'YES',
       poimage: "assets/images/9.jpg",
       anaimage: "assets/images/10.jpg",
-      color: Color(0xFF989493)),
+      color: const Color(0xFF989493)),
   Product(
       id: 4,
       examtitle: "CHEST PA",
@@ -289,7 +289,7 @@ List<Product> products2 = [
       grid: 'YES',
       poimage: "assets/images/10.jpg",
       anaimage: "assets/images/9.jpg",
-      color: Color(0xFFE6B398)),
+      color: const Color(0xFFE6B398)),
   Product(
       id: 5,
       examtitle: "CHEST PA",
@@ -315,7 +315,7 @@ List<Product> products2 = [
       grid: 'YES',
       poimage: "assets/images/11.jpg",
       anaimage: "assets/images/8.jpg",
-      color: Color(0xFFEEE5E5)),
+      color: const Color(0xFFEEE5E5)),
   Product(
     id: 6,
     examtitle: "CHEST PA",
@@ -341,7 +341,7 @@ List<Product> products2 = [
     grid: 'YES',
     poimage: "assets/images/12.jpg",
     anaimage: "assets/images/7.jpg",
-    color: Color(0xFFAEAEAE),
+    color: const Color(0xFFAEAEAE),
   ),
 ];
 
@@ -371,7 +371,7 @@ List<Product> products3 = [
       grid: 'YES',
       poimage: "assets/images/13.jpg",
       anaimage: "assets/images/6.jpg",
-      color: Color(0xFF3D82AE)),
+      color: const Color(0xFF3D82AE)),
   Product(
       id: 2,
       examtitle: "CHEST PA",
@@ -397,7 +397,7 @@ List<Product> products3 = [
       grid: 'YES',
       poimage: "assets/images/14.jpg",
       anaimage: "assets/images/5.jpg",
-      color: Color(0xFFD3A984)),
+      color: const Color(0xFFD3A984)),
   Product(
       id: 3,
       examtitle: "CHEST PA",
@@ -423,7 +423,7 @@ List<Product> products3 = [
       grid: 'YES',
       poimage: "assets/images/15.jpg",
       anaimage: "assets/images/4.jpg",
-      color: Color(0xFF989493)),
+      color: const Color(0xFF989493)),
   Product(
       id: 4,
       examtitle: "CHEST PA",
@@ -449,7 +449,7 @@ List<Product> products3 = [
       grid: 'YES',
       poimage: "assets/images/16.jpg",
       anaimage: "assets/images/3.jpg",
-      color: Color(0xFFE6B398)),
+      color: const Color(0xFFE6B398)),
   Product(
       id: 5,
       examtitle: "CHEST PA",
@@ -475,7 +475,7 @@ List<Product> products3 = [
       grid: 'YES',
       poimage: "assets/images/17.jpg",
       anaimage: "assets/images/2.jpg",
-      color: Color(0xFFFB7883)),
+      color: const Color(0xFFFB7883)),
   Product(
     id: 6,
     examtitle: "CHEST PA",
@@ -501,7 +501,7 @@ List<Product> products3 = [
     grid: 'YES',
     poimage: "assets/images/18.jpg",
     anaimage: "assets/images/1.jpg",
-    color: Color(0xFFAEAEAE),
+    color: const Color(0xFFAEAEAE),
   ),
 ];
 

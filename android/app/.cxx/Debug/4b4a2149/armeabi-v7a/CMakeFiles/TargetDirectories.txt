@@ -1,0 +1,2 @@
+C:/Users/pinoj/StudioProjects/x_ray-project/android/app/.cxx/Debug/4b4a2149/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/pinoj/StudioProjects/x_ray-project/android/app/.cxx/Debug/4b4a2149/armeabi-v7a/CMakeFiles/rebuild_cache.dir

@@ -5,13 +5,13 @@ import 'package:x_ray/models/Product.dart';
 class ZoomedImagePage extends StatelessWidget {
   final Product product;
 
-  const ZoomedImagePage({required this.product});
+  const ZoomedImagePage({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Anatomy Image'),
+        title: const Text('Anatomy Image'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -30,22 +30,22 @@ class ZoomedImagePage extends StatelessWidget {
                           fit: BoxFit.fill,
                         ),
                       ),
-                      SizedBox(height: 20),
-                      Text(
+                      const SizedBox(height: 20),
+                      const Text(
                         ' Check Point',
                         style: Title2,
                       ),
-                      SizedBox(height: 2),
+                      const SizedBox(height: 2),
                       Container(
                         decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(color: Colors.blue, width: 1),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(color: Colors.blue, blurRadius: 3)
                             ],
                             borderRadius: BorderRadius.circular(12)),
                         child: Container(
-                          padding: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           width: MediaQuery.of(context).size.width,
                           child: Text(
                             product.checkpoint,

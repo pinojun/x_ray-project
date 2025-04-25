@@ -23,7 +23,7 @@ class DetailsScreen extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(top: size.height * 0.3),
                     width: size.width,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(24),
@@ -31,41 +31,41 @@ class DetailsScreen extends StatelessWidget {
                       ),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                           top: 50, left: 10, right: 10, bottom: 30),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(' Positioning', style: Title2),
-                          SizedBox(height: 5),
+                          const Text(' Positioning', style: Title2),
+                          const SizedBox(height: 5),
                           Container(
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 border:
                                     Border.all(color: Colors.blue, width: 1),
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(color: Colors.blue, blurRadius: 3)
                                 ],
                                 borderRadius: BorderRadius.circular(12)),
-                            padding: EdgeInsets.all(15),
+                            padding: const EdgeInsets.all(15),
                             width: size.width,
                             child: Text(
                               product.position,
                               style: Description1,
                             ),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           RichText(
                             text: TextSpan(
                               children: [
-                                TextSpan(text: ' 호흡 : ', style: Title3),
+                                const TextSpan(text: ' 호흡 : ', style: Title3),
                                 TextSpan(
                                     text: product.breath, style: Description1)
                               ],
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.symmetric(vertical: 10),
+                            margin: const EdgeInsets.symmetric(vertical: 10),
                             height: 2,
                             width: size.width - 10,
                             color: Colors.black54,
@@ -73,13 +73,13 @@ class DetailsScreen extends StatelessWidget {
                           RichText(
                             text: TextSpan(
                               children: [
-                                TextSpan(text: ' 중심선 : ', style: Title3),
+                                const TextSpan(text: ' 중심선 : ', style: Title3),
                                 TextSpan(text: product.cr, style: Description1)
                               ],
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.symmetric(vertical: 10),
+                            margin: const EdgeInsets.symmetric(vertical: 10),
                             height: 2,
                             width: size.width - 10,
                             color: Colors.black54,
@@ -110,7 +110,7 @@ class DetailsScreen extends StatelessWidget {
       backgroundColor: product.color,
       elevation: 0,
       leading: IconButton(
-        icon: Icon(Icons.arrow_back),
+        icon: const Icon(Icons.arrow_back),
         onPressed: () {
           Navigator.pop(context);
         },
@@ -133,52 +133,52 @@ class ExposureFactor extends StatelessWidget {
       //촬영조건
       child: Column(
         children: [
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width,
-            child: Text(' 촬영조건', style: Title3),
+            child: const Text(' 촬영조건', style: Title3),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
                 children: [
                   Container(
-                    child: Text('kVp', style: Title3),
+                    child: const Text('kVp', style: Title3),
                   ),
                   Container(child: Text(product.kvp, style: Description2)),
                 ],
               ),
               Column(
                 children: [
-                  Container(child: Text('mAs', style: Title3)),
+                  Container(child: const Text('mAs', style: Title3)),
                   Container(child: Text(product.mas, style: Description2)),
                 ],
               ),
               Column(
                 children: [
-                  Container(child: Text('표준두께', style: Title3)),
+                  Container(child: const Text('표준두께', style: Title3)),
                   Container(child: Text(product.thick, style: Description2)),
                 ],
               ),
               Column(
                 children: [
-                  Container(child: Text('SID', style: Title3)),
+                  Container(child: const Text('SID', style: Title3)),
                   Container(child: Text(product.sid, style: Description2)),
                 ],
               ),
               Column(
                 children: [
-                  Container(child: Text('Grid', style: Title3)),
+                  Container(child: const Text('Grid', style: Title3)),
                   Container(child: Text(product.grid, style: Description2)),
                 ],
               ),
             ],
           ),
-          SizedBox(height: 5),
-          Container(
+          const SizedBox(height: 5),
+          SizedBox(
             width: MediaQuery.of(context).size.width,
-            child: Text(
+            child: const Text(
               '출처:식약처 영상의학검사(일반촬영) 표준촬영기법 가이드라인',
               style: Description3,
             ),

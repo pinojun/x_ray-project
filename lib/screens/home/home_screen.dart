@@ -45,20 +45,20 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         actions: [
-          Text('EXIT'),
+          const Text('EXIT'),
           IconButton(
-            icon: Icon(Icons.exit_to_app),
+            icon: const Icon(Icons.exit_to_app),
             onPressed: () {},
           ),
         ],
       ),
       drawer: Drawer(
         child: ListView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           children: [
             ListTile(
-                leading: Icon(Icons.home),
-                title: Text('CHEST'),
+                leading: const Icon(Icons.home),
+                title: const Text('CHEST'),
                 onTap: () {
                   switchProducts(products1);
                   setState(() {
@@ -67,12 +67,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pop(context);
                 }),
             ExpansionTile(
-              title: Text('LOW EXTERMITY'),
-              leading: Icon(Icons.home),
-              childrenPadding: EdgeInsets.only(left: 60),
+              title: const Text('LOW EXTERMITY'),
+              leading: const Icon(Icons.home),
+              childrenPadding: const EdgeInsets.only(left: 60),
               children: [
                 ListTile(
-                    title: Text('FOOT'),
+                    title: const Text('FOOT'),
                     onTap: () {
                       switchProducts(products2);
                       setState(() {
@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.pop(context);
                     }),
                 ListTile(
-                    title: Text('ANKLE'),
+                    title: const Text('ANKLE'),
                     onTap: () {
                       switchProducts(products3);
                       setState(() {
@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.pop(context);
                     }),
                 ListTile(
-                    title: Text('KNEE'),
+                    title: const Text('KNEE'),
                     onTap: () {
                       switchProducts(products1);
                       setState(() {
@@ -105,16 +105,16 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: kDefaultPaddin),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
               child: GridView.builder(
                 itemCount: selectedProducts.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: kDefaultPaddin,
                   crossAxisSpacing: kDefaultPaddin,

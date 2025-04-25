@@ -20,7 +20,7 @@ class ItemCard extends StatelessWidget {
           children: [
             Expanded(
               child: Container(
-                padding: EdgeInsets.all(kDefaultPaddin),
+                padding: const EdgeInsets.all(kDefaultPaddin),
                 decoration: BoxDecoration(
                   color: product.color,
                   borderRadius: BorderRadius.circular(16),

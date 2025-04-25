@@ -20,7 +20,7 @@ class ProductTitleWithImage extends StatelessWidget {
             product.purpose, //검사목적 내용
             style: Description1W,
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -59,7 +59,7 @@ class ProductTitleWithImage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(width: kDefaultPaddin),
+              const SizedBox(width: kDefaultPaddin),
               Expanded(
                 flex: 2,
                 child: ClipRRect(
