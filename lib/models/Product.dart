@@ -188,7 +188,7 @@ List<Product> products1 = [
 List<Product> products2 = [
   Product(
       id: 1,
-      examtitle: "CHEST PA",
+      examtitle: "CHEST2 PA",
       purpose: '폐결핵, 폐렴, 폐결절, 기흉, 무기폐 등 폐질환과 흉막삼출액, 연부조직, 심장 크기 관찰하기 위함.',
       position: 'Erect 또는 Sitting 자세를 취한다.'
           '턱을 들어 올리고 환자의 정중시상면이 디텍터 중앙에 오게한다.'
@@ -348,7 +348,7 @@ List<Product> products2 = [
 List<Product> products3 = [
   Product(
       id: 1,
-      examtitle: "CHEST PA",
+      examtitle: "CHEST3 PA",
       purpose: '폐결핵, 폐렴, 폐결절, 기흉, 무기폐 등 폐질환과 흉막삼출액, 연부조직, 심장 크기 관찰하기 위함.',
       position: 'Erect 또는 Sitting 자세를 취한다.'
           '턱을 들어 올리고 환자의 정중시상면이 디텍터 중앙에 오게한다.'

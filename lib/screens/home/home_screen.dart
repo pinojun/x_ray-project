@@ -3,6 +3,7 @@ import 'package:x_ray/constants.dart';
 import 'package:x_ray/models/Product.dart';
 import 'package:x_ray/screens/details/details_screen.dart';
 import 'package:x_ray/screens/home/components/item_card.dart';
+import 'package:x_ray/screens/home/components/custom_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -52,56 +53,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      drawer: Drawer(
-        child: ListView(
-          physics: const BouncingScrollPhysics(),
-          children: [
-            ListTile(
-                leading: const Icon(Icons.home),
-                title: const Text('CHEST'),
-                onTap: () {
-                  switchProducts(products1);
-                  setState(() {
-                    appBarTitle = 'CHEST'; //appbar 타이틀의 값을 변경
-                  });
-                  Navigator.pop(context);
-                }),
-            ExpansionTile(
-              title: const Text('LOW EXTERMITY'),
-              leading: const Icon(Icons.home),
-              childrenPadding: const EdgeInsets.only(left: 60),
-              children: [
-                ListTile(
-                    title: const Text('FOOT'),
-                    onTap: () {
-                      switchProducts(products2);
-                      setState(() {
-                        appBarTitle = 'FOOT';
-                      });
-                      Navigator.pop(context);
-                    }),
-                ListTile(
-                    title: const Text('ANKLE'),
-                    onTap: () {
-                      switchProducts(products3);
-                      setState(() {
-                        appBarTitle = 'ANKLE';
-                      });
-                      Navigator.pop(context);
-                    }),
-                ListTile(
-                    title: const Text('KNEE'),
-                    onTap: () {
-                      switchProducts(products1);
-                      setState(() {
-                        appBarTitle = 'KNEE';
-                      });
-                      Navigator.pop(context);
-                    }),
-              ],
-            )
-          ],
-        ),
+      drawer: CustomDrawer(
+        switchProducts: switchProducts,
+        updateTitle: (String title) {
+          setState(() {
+            appBarTitle = title;
+          });
+        },
       ),
       body: Column(
         children: [

@@ -16,6 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'X-Ray App',
       theme: ThemeData(
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+        drawerTheme: const DrawerThemeData(
+          backgroundColor: Colors.white,
+          elevation: 16,
+        ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
           brightness: Brightness.light,
