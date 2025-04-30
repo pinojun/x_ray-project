@@ -19,8 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    // Initialize the selectedProducts with products1 as the default choice.
-    selectedProducts = products1;
+    // Initialize the selectedProducts with chest as the default choice.
+    selectedProducts = chest;
     super.initState();
   }
 

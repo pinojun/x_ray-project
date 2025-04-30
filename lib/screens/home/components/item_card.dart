@@ -24,7 +24,7 @@ class ItemCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Hero(
-                  tag: "position_${product.id}",
+                  tag: "${product.id}",
                   child: Image.asset(product.poimage),
                 ),
               ),
