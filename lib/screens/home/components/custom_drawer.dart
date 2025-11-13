@@ -11,16 +11,17 @@ class CustomDrawer extends StatefulWidget {
     required this.updateTitle,
   });
 
-  // 각 카테고리별 Product 리스트를 저장하는 맵
+  // 각 메뉴아이템의 서브메뉴와 그에 해당하는 Product 리스트를 연결하는 맵
+  // 프로덕트 리스트의 body part명을 키값으로 해서
   final Map<String, List<List<Product>>> categoryProducts = {
-    category1Title: [chest, abdomen],
+    category1Title: [chest, sternum, abdomen],
     category2Title: [hand],
     category3Title: [knee],
   };
 
-  // 카테고리와 서브메뉴 정의
+  // body 카테고리와 그 하부의 서브메뉴 정의하는 맵
   final Map<String, List<String>> menuItems = {
-    'CHEST & ABDOMEN': ['CHEST', 'ABDOMEN'],
+    'CHEST & ABDOMEN': ['Chest.Rib', 'Sternum.Clavicle', 'Abdomen'],
     'UPPER EXTREMITY': ['HAND'],
     'LOWER EXTREMITY': ['KNEE'],
   };
