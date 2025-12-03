@@ -15,7 +15,8 @@ class ProductTitleWithImage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // SizedBox(height: 5),
+          const Text('Purpose', style: Description1W),
+          SizedBox(height: 5),
           Text(
             product.purpose, //검사목적 내용
             style: Description1W,

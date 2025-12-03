@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // 수정이 있었다.
 
   @override
   Widget build(BuildContext context) {

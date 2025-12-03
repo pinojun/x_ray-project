@@ -17,11 +17,15 @@ class DetailsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            ProductTitleWithImage(
+              product: product,
+            ),
             SizedBox(
               child: Stack(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: size.height * 0.3),
+                    // margin: EdgeInsets.only(top: size.height * 0.3),
+                    margin: EdgeInsets.only(top: 20),
                     width: size.width,
                     decoration: const BoxDecoration(
                       color: Colors.white,
@@ -32,7 +36,7 @@ class DetailsScreen extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(
-                          top: 50, left: 10, right: 10, bottom: 30),
+                          top: 20, left: 10, right: 10, bottom: 30),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -89,9 +93,10 @@ class DetailsScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  ProductTitleWithImage(
-                    product: product,
-                  ),
+                  // ProductTitleWithImage 화면을 맨위로 올렸음
+                  // ProductTitleWithImage(
+                  //   product: product,
+                  // ),
                 ],
               ),
             ),
@@ -110,7 +115,7 @@ class DetailsScreen extends StatelessWidget {
       backgroundColor: product.color,
       elevation: 0,
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back),
+        icon: const Icon(Icons.arrow_back, color: Colors.white),
         onPressed: () {
           Navigator.pop(context);
         },
