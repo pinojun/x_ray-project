@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return PopScope(
       // 뒤로가기 제스처(시스템 백 버튼)를 막습니다.
       canPop: false,
-      // 변경됨: onPopInvoked -> onPopInvokedWithResult
+       // 변경됨: onPopInvoked -> onPopInvokedWithResult
       // 파라미터에 'result'가 추가되었습니다.
       onPopInvokedWithResult: (bool didPop, dynamic result) {
         // 이미 시스템에 의해 뒤로가기가 처리되었다면(didPop이 true라면)
